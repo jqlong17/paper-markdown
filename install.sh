@@ -6,7 +6,7 @@
 set -e
 
 REPO="jqlong17/paper-markdown"
-VERSION="v1.0.0"
+VERSION="v1.0.1"
 INSTALL_DIR="/usr/local/bin"
 
 # 获取平台信息

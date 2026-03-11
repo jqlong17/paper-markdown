@@ -1,6 +1,6 @@
 [package]
 name = "paper-markdown"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 authors = ["jqlong17"]
 description = "极速 Markdown 预览 CLI 工具 - Rust + WebView"
