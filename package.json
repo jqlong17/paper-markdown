@@ -28,6 +28,9 @@
   },
   "files": [
     "bin/",
+    "src/",
+    "Cargo.toml",
+    "Cargo.lock",
     "target/release/paper",
     "install.js",
     "README.md",
