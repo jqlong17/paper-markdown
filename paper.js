@@ -562,7 +562,7 @@ function createWindow() {
     height: 800,
     minWidth: 640,
     minHeight: 480,
-    titleBarStyle: 'hiddenInset',
+    titleBarStyle: 'default',
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true

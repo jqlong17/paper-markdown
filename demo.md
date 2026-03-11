@@ -41,7 +41,7 @@ function hello() {
 
 #### 链接与强调
 
-访问 [OpenCode](https://opencode.ai) 获取更多信息。
+访问 [GitHub](https://github.com/jqlong17/paper-cli) 获取更多信息。
 
 这是一段包含 **加粗** 和 *斜体* 的文字。
 

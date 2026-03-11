@@ -29,7 +29,7 @@ npx paper-cli demo.md
 ### 方式三：从源码安装
 
 ```bash
-git clone https://github.com/yourusername/paper-cli.git
+git clone https://github.com/jqlong17/paper-cli.git
 cd paper-cli
 npm install
 npm link
@@ -199,4 +199,4 @@ cat log/paper_2024-XX-XX_XXXXXX.log
 
 ## License
 
-MIT © [Your Name](https://github.com/yourusername)
+MIT © [jqlong17](https://github.com/jqlong17)
