@@ -2,16 +2,16 @@
   "name": "paper-cli",
   "version": "1.0.0",
   "description": "极简 Markdown 预览 CLI 工具 - 冷静、有人文感的数字宣纸",
-  "main": "paper.js",
+  "main": "bin/paper.js",
   "bin": {
-    "paper": "./paper.js"
+    "paper": "./bin/paper.js"
   },
   "scripts": {
-    "test": "node test.js",
-    "start": "node paper.js"
+    "test": "node scripts/test.js",
+    "start": "node bin/paper.js"
   },
   "files": [
-    "paper.js",
+    "bin/",
     "README.md",
     "LICENSE"
   ],
@@ -25,7 +25,7 @@
     "markdown-preview",
     "digital-paper"
   ],
-  "author": "",
+  "author": "jqlong17",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"

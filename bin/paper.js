@@ -29,7 +29,8 @@ try {
 }
 
 // ==================== 日志系统 ====================
-const LOG_DIR = path.join(__dirname, 'log');
+const ROOT_DIR = path.join(__dirname, '..');
+const LOG_DIR = path.join(ROOT_DIR, 'log');
 
 // 确保日志目录存在
 if (!fs.existsSync(LOG_DIR)) {
@@ -592,7 +593,7 @@ app.on('activate', () => {
 `;
     
     // 写入临时 Electron 脚本
-    const electronScriptPath = path.join(__dirname, '.paper-electron.js');
+    const electronScriptPath = path.join(ROOT_DIR, '.paper-electron.js');
     fs.writeFileSync(electronScriptPath, electronScript);
     
     // 启动 Electron - 获取正确的可执行文件路径
