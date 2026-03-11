@@ -1642,7 +1642,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "paper-cli"
+name = "paper-markdown"
 version = "1.0.0"
 dependencies = [
  "clap",

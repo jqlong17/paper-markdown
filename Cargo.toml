@@ -1,5 +1,5 @@
 [package]
-name = "paper-cli"
+name = "paper-markdown"
 version = "1.0.0"
 edition = "2021"
 authors = ["jqlong17"]
@@ -25,5 +25,5 @@ strip = true
 panic = "abort"
 
 [[bin]]
-name = "paper"
+name = "paper-markdown"
 path = "src/main.rs"

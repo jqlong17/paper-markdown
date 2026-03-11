@@ -24,7 +24,7 @@
 ### 方式一：Cargo 安装（推荐）
 
 ```bash
-cargo install paper-cli
+cargo install paper-markdown
 ```
 
 ### 方式二：从源码构建
