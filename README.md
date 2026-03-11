@@ -1,9 +1,10 @@
-# Paper CLI
+# Paper Markdown
 
 > 极速 Markdown 预览 CLI 工具
 > 
 > *冷静、有人文感的数字宣纸*
 
+[![Crates.io](https://img.shields.io/crates/v/paper-markdown.svg)](https://crates.io/crates/paper-markdown)
 [![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange.svg)](https://www.rust-lang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -16,18 +17,32 @@
 - 📝 **实时预览** - 文件修改自动刷新
 - 🎨 **数字宣纸** - 优雅的排版风格
 - 💾 **内存优化** - 内存占用仅 ~20MB（对比 Electron ~150MB）
+- 🔕 **静默运行** - 默认无终端输出，可加 `--log` 查看
 
 ---
 
 ## 📦 安装
 
-### 方式一：Cargo 安装（推荐）
+### 方式一：预编译二进制（推荐，无需 Rust）
+
+**macOS / Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/jqlong17/paper-cli/main/install.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+# 从 GitHub Releases 下载
+# https://github.com/jqlong17/paper-cli/releases
+```
+
+### 方式二：Cargo 安装（需要 Rust）
 
 ```bash
 cargo install paper-markdown
 ```
 
-### 方式二：从源码构建
+### 方式三：从源码构建
 
 ```bash
 git clone https://github.com/jqlong17/paper-cli.git
@@ -35,31 +50,33 @@ cd paper-cli
 cargo build --release
 ```
 
-### 方式三：npm 安装
-
-```bash
-# 从 GitHub 安装（推荐）
-npm install -g jqlong17/paper-cli
-
-# 或使用 npx（无需安装）
-npx paper-cli demo.md
-```
-
-**注意**: npm 安装会自动检测平台并下载/构建对应的二进制文件。如果本地没有 Rust 环境，会从 GitHub Releases 下载预编译版本。
-
 ---
 
 ## 🚀 使用方法
 
 ```bash
-# 打开 Markdown 文件
-paper demo.md
+# 打开 Markdown 文件（静默模式）
+paper-markdown demo.md
+
+# 显示日志输出
+paper-markdown --log demo.md
 
 # 查看帮助
-paper --help
+paper-markdown --help
 
 # 查看版本
-paper --version
+paper-markdown --version
+```
+
+### 多窗口支持
+
+可以同时打开多个文件，每个窗口独立运行：
+
+```bash
+paper-markdown doc1.md
+paper-markdown doc2.md
+paper-markdown doc3.md
+# 终端不会阻塞，可以继续使用
 ```
 
 ---
@@ -80,11 +97,11 @@ paper --version
 
 ## 📊 性能对比
 
-| 方案 | 内存占用 | 启动时间 | 包体积 |
-|------|---------|----------|--------|
-| **Paper CLI** (Rust) | **~20MB** | **<1s** | **~5MB** |
-| Electron | ~150MB | ~3s | ~150MB |
-| Node.js + 浏览器 | ~50MB | ~2s | ~80MB |
+| 方案 | 内存占用 | 启动时间 | 包体积 | 需要安装 |
+|------|---------|----------|--------|----------|
+| **Paper Markdown** | **~20MB** | **<1s** | **~2MB** | ❌ 无需 |
+| Electron | ~150MB | ~3s | ~150MB | ❌ 无需 |
+| Node.js + 浏览器 | ~50MB | ~2s | ~80MB | ✅ Node.js |
 
 ---
 
