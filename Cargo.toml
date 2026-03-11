@@ -1,0 +1,29 @@
+[package]
+name = "paper-cli"
+version = "1.0.0"
+edition = "2021"
+authors = ["jqlong17"]
+description = "极速 Markdown 预览 CLI 工具 - Rust + WebView"
+license = "MIT"
+repository = "https://github.com/jqlong17/paper-cli"
+keywords = ["markdown", "cli", "preview", "webview"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+warp = "0.3"
+pulldown-cmark = "0.9"
+tokio = { version = "1.0", features = ["rt-multi-thread", "macros", "signal", "time"] }
+clap = { version = "4.0", features = ["derive"] }
+portpicker = "0.1"
+tao = "0.16"
+wry = "0.24"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+panic = "abort"
+
+[[bin]]
+name = "paper"
+path = "src/main.rs"

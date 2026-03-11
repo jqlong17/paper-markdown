@@ -1,0 +1,18 @@
+#!/bin/bash
+# Paper CLI 包装脚本
+# 开发时直接使用 target/release/paper
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# 优先使用本地构建的二进制
+if [ -f "$PROJECT_ROOT/target/release/paper" ]; then
+    exec "$PROJECT_ROOT/target/release/paper" "$@"
+# 否则使用已安装的二进制
+elif [ -f "$SCRIPT_DIR/paper" ]; then
+    exec "$SCRIPT_DIR/paper" "$@"
+else
+    echo "[paper] 错误: 找不到 paper 二进制文件"
+    echo "[paper] 请先运行: cargo build --release"
+    exit 1
+fi

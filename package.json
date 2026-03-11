@@ -1,38 +1,44 @@
 {
   "name": "paper-cli",
   "version": "1.0.0",
-  "description": "极简 Markdown 预览 CLI 工具 - 冷静、有人文感的数字宣纸",
-  "main": "bin/paper.js",
+  "description": "极速 Markdown 预览 CLI 工具 - Rust + WebView",
+  "main": "index.js",
   "bin": {
-    "paper": "./bin/paper.js"
+    "paper": "bin/paper"
   },
   "scripts": {
-    "test": "node scripts/test.js",
-    "start": "node bin/paper.js"
+    "postinstall": "node install.js",
+    "test": "echo '请使用 cargo test'"
   },
-  "files": [
-    "bin/",
-    "README.md",
-    "LICENSE"
-  ],
   "keywords": [
     "markdown",
-    "preview",
     "cli",
-    "paper",
-    "minimal",
-    "electron",
-    "markdown-preview",
-    "digital-paper"
+    "preview",
+    "webview",
+    "rust"
   ],
   "author": "jqlong17",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jqlong17/paper-cli"
+  },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {
-    "electron": "^33.0.0",
-    "markdown-it": "^14.1.0",
-    "open": "^10.1.0"
-  }
+  "files": [
+    "bin/",
+    "install.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
 }
