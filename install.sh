@@ -16,13 +16,13 @@ get_platform() {
     
     case "$platform" in
         linux)
-            platform="linux"
+            platform="unknown-linux-gnu"
             ;;
         darwin)
-            platform="macos"
+            platform="apple-darwin"
             ;;
         mingw*|msys*|cygwin*)
-            platform="windows"
+            platform="pc-windows-msvc"
             ;;
         *)
             echo "不支持的平台: $platform"
@@ -54,7 +54,7 @@ main() {
     echo "✓ 检测到平台: $PLATFORM"
     
     # 构建下载 URL
-    if [ "$PLATFORM" = "x86_64-windows" ]; then
+    if [ "$PLATFORM" = "x86_64-pc-windows-msvc" ]; then
         FILENAME="paper-markdown-${PLATFORM}.exe"
         OUTPUT_NAME="paper-markdown.exe"
     else
@@ -108,7 +108,7 @@ main() {
     fi
     
     # 设置权限
-    if [ "$PLATFORM" != "x86_64-windows" ]; then
+    if [ "$PLATFORM" != "x86_64-pc-windows-msvc" ]; then
         chmod +x "$INSTALL_DIR/$OUTPUT_NAME"
     fi
     
