@@ -32,8 +32,14 @@ curl -fsSL https://raw.githubusercontent.com/jqlong17/paper-cli/main/install.sh 
 
 **Windows (PowerShell):**
 ```powershell
-# 从 GitHub Releases 下载
-# https://github.com/jqlong17/paper-cli/releases
+# 下载最新版本 (Intel/AMD 处理器)
+Invoke-WebRequest -Uri "https://github.com/jqlong17/paper-cli/releases/latest/download/paper-markdown-x86_64-pc-windows-msvc.exe" -OutFile "$env:USERPROFILE\paper-markdown.exe"
+
+# 添加到 PATH (可选)
+$env:PATH += ";$env:USERPROFILE"
+
+# 或者手动下载
+# https://github.com/jqlong17/paper-cli/releases/latest
 ```
 
 ### 方式二：Cargo 安装（需要 Rust）
