@@ -38,8 +38,14 @@ cargo build --release
 ### 方式三：npm 安装
 
 ```bash
-npm install -g paper-cli
+# 从 GitHub 安装（推荐）
+npm install -g jqlong17/paper-cli
+
+# 或使用 npx（无需安装）
+npx paper-cli demo.md
 ```
+
+**注意**: npm 安装会自动检测平台并下载/构建对应的二进制文件。如果本地没有 Rust 环境，会从 GitHub Releases 下载预编译版本。
 
 ---
 

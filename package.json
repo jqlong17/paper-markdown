@@ -28,6 +28,7 @@
   },
   "files": [
     "bin/",
+    "target/release/paper",
     "install.js",
     "README.md",
     "LICENSE"
