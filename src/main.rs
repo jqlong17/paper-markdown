@@ -13,7 +13,7 @@ use server::start_server;
 #[command(
     name = "paper",
     about = "极速 Markdown 预览 CLI 工具 - Rust + WebView",
-    version = "1.0.0"
+    version
 )]
 struct Cli {
     /// Markdown 文件路径
